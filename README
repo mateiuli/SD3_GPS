@@ -1,0 +1,18 @@
+Am rezolvat toate task-urile, inclusiv bonusul.
+Pentru determinarea celui mai scurt drum folosesc algoritmul lui Dijkstra, iar
+pentru a-l face mai rapid, l-am implementat folosind o coada cu prioritati.
+La task-urile 1 si 2 execut algoritmul de cautarea drumului minim o singura
+data. In timpul cautarii drumului generez un vector de predecesori, pe baza
+caruia reconstitui traseul folosind o functie recursiva.
+
+Determin drumul minim de la urmatoarea intersectie de pe drumul curent, pana 
+la ultima intersectie inainte de punctul final, dupa care adun distantele
+la care se afla soferul fata de intersectiile de start/destinatie.
+
+In rezolvarea task-ului 3 (bonusul) citesc tot timpul pozitia curenta a
+soferului si execut algoritmul de cautare a drumului minim numai daca este
+necesara o noua cautare. La task-ul 3 mai retin un vector (bool) care imi
+spune daca anumite noduri fac parte din traseu sau nu, astfel voi stii cand
+e necesara o reconfigurare a traseului. Pentru afisarea indicatiilor ma 
+folosesc de un vector de succesori, care e generat pe baza vectorulului 
+de predecesori.
